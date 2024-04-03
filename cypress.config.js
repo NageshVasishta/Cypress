@@ -14,7 +14,7 @@ module.exports = defineConfig({
   },
   e2e: {
     baseUrl : "https://www.saucedemo.com/",
-    specPattern : 'cypress/e2e/SauceLab/*.cy.js',
+    specPattern : 'cypress/e2e/AutomationPratice/*.cy.js',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
