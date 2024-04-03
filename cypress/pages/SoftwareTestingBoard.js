@@ -49,9 +49,9 @@ export class SoftwareTestingBoard {
             cy.log(price)
         })
 
-
+        cy.wait(5000, { log: false })
         cy.get('#product-addtocart-button').click()
-        cy.wait(2000, { log: false })
+        cy.wait(5000, { log: false })
 
         cy.get('span.text').contains('My Cart').click({ force: true })
         cy.get('.item-qty.cart-item-qty').should('have.value', '3')
@@ -64,7 +64,7 @@ export class SoftwareTestingBoard {
             expect(Number(price) * 3).to.equals(Number(TPrice))
         })
 
-        cy.get("button[title='Proceed to Checkout']").click()
+        cy.get("button[title='Proceed to Checkout']").click({force: true})
         // cy.get("button[title='Add to Cart']").eq(index).children('span').click({ force: true })
 
         // cy.get('.product-item-link').contains('Montana Wind Jacket').parentsUntil('div')

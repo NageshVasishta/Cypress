@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectId: 'hzbo3y',
   defaultCommandTimeout : 6000,
   reporter : "mochawesome",
-  video : false,
+  video : true,
   reporterOptions: {
     // disable overwrite to generate many JSON reports
     overwrite: false,

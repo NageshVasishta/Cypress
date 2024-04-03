@@ -1,2 +1,4 @@
 
 /node_modules
+cypress/videos/softwaretestingboard.cy.js.mp4
+mochawesome-report/
