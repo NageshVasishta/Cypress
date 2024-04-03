@@ -33,7 +33,7 @@ export class SoftwareTestingBoard {
         })
 
         //Select first size
-            this.getSize().first().click()
+            this.getSize().eq(2).click()
 
         //Select last color
         this.getColor().last().click()
@@ -64,9 +64,7 @@ export class SoftwareTestingBoard {
             expect(Number(price) * 3).to.equals(Number(TPrice))
         })
 
-        cy.get("button[title='Proceed to Checkout']").click(
-
-        )
+        cy.get("button[title='Proceed to Checkout']").click()
         // cy.get("button[title='Add to Cart']").eq(index).children('span').click({ force: true })
 
         // cy.get('.product-item-link').contains('Montana Wind Jacket').parentsUntil('div')
