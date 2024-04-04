@@ -17,14 +17,14 @@ export class SoftwareTestingBoard {
         return cy.get('#qty')
     }
 
-    navigateToJackets() {
+    navigateToJackets(mainMenu,subMenu) {
         // this.getMainMenuItem().contains('Top').invoke('show')
-        this.getMainMenuItem().contains('Men').click()
-        this.getItems().contains('Jackets').click()
+        this.getMainMenuItem().contains(mainMenu).click()
+        this.getItems().contains(subMenu).click()
     }
 
     addToCard() {
-        cy.get('.product-item-link').each((el, index) => {
+        cy.get('.product-item-link').each((el) => {
 
             if (el.text().includes('Beaumont Summit Kit')
             ) {

@@ -11,20 +11,22 @@ export class SoftwareTestingCheckout {
     }
 
 
-    checkout(){
-        cy.wait(3000)
-        this.getCustomerEmail().eq(0).type('prabhakar@gmail.com',{force : true})
-        this.getFirstName().type('Prabha')
-        this.getLastName().type('Prabhakar')
+    checkout(email,firstName, lastName, street, city, region,postcode,telephone){
+
+        cy.wait(5000,{log : false})
+        this.getCustomerEmail().should('be.visible')
+        this.getCustomerEmail().eq(0).type(email,{force : true})
+        this.getFirstName().type(firstName)
+        this.getLastName().type(lastName)
         cy.get('ul.opc-progress-bar li').eq(0).
         should('have.class','opc-progress-bar-item _active').
         children('span').should('have.text','Shipping')
         
-        cy.get('span').contains('Street Address').parent().siblings('div').children('div').children('div').children('input').eq(0).type("Street 1")
-        cy.get('input[name="city"]').type('Texas')
-        cy.get('select[name="region_id"]').select('Texas')
-        cy.get('input[name="postcode"]').type('12314')
-        cy.get('input[name="telephone"]').type('234563454')
+        cy.get('span').contains('Street Address').parent().siblings('div').children('div').children('div').children('input').eq(0).type(street)
+        cy.get('input[name="city"]').type(city)
+        cy.get('select[name="region_id"]').select(region)
+        cy.get('input[name="postcode"]').type(postcode)
+        cy.get('input[name="telephone"]').type(telephone)
 
         cy.get('table.table-checkout-shipping-method tr td').
         contains('Flat Rate').
