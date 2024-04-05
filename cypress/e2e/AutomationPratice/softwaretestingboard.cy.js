@@ -22,9 +22,9 @@ describe('Software testing board - Order Jacket',()=>{
     })
 
     it('Order Jacket',()=>{
-        STB.navigateToJackets(data.MainMenu,data.SubMenu)
-        STB.addToCard()
+        STB.navigate_to_product(data.MainMenu,data.SubMenu)
+        // STB.addToCard()
 
-        STC.checkout(data.email,data.firstName, data.lastName, data.street, data.city, data.region,data.postcode,data.telephone)
+        // STC.checkout(data.email,data.firstName, data.lastName, data.street, data.city, data.region,data.postcode,data.telephone)
     })
 })

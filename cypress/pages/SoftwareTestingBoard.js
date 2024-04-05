@@ -17,10 +17,10 @@ export class SoftwareTestingBoard {
         return cy.get('#qty')
     }
 
-    navigateToJackets(mainMenu,subMenu) {
-        // this.getMainMenuItem().contains('Top').invoke('show')
+    navigate_to_product(mainMenu,subMenu) {
         this.getMainMenuItem().contains(mainMenu).click()
         this.getItems().contains(subMenu).click()
+
     }
 
     addToCard() {
