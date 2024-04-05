@@ -1,11 +1,12 @@
 {
   "name": "cypress-nagesh",
   "version": "1.0.0",
-  "description": "Automation Practice",
+  "description": "Automation Practise",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run": "node cypress/tooling/cypress-run.js"
+    "cy:run": "node cypress/tooling/cypress-run.js",
+    "cy:cloud:run": "node cypress/tooling/cypress-cloud-run.js"
   },
   "author": "",
   "license": "ISC",
