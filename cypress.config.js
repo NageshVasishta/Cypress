@@ -16,6 +16,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl : "https://www.saucedemo.com/",
     specPattern : 'cypress/e2e/AutomationPratice/*.cy.js',
+    excludeSpecPattern : ['cypress/e2e/AutomationPratice/softwaretestingboard_js.cy.js','/Users/nageshr/Automation/Git/Cypress/cypress/e2e/AutomationPratice/softwaretestingboard.cy.js'],
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
