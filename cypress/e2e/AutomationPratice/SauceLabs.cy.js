@@ -14,12 +14,14 @@ describe('Login Scenarios', () => {
     SLP.enter_login_details(S_Users.standard.username, S_Users.standard.password)
     cy.url().should('include', 'inventory.html')
     SHP.verifyPagetitle()
+    cy.screenshot('StandardUserLogin')
   })
 
-  it.only('Verify Login for Locked User', () => {
+  it('Verify Login for Locked User', () => {
     cy.visit(url)
     SLP.enter_login_details(S_Users.locked.username, S_Users.locked.password)
     SLP.verifyLockedUserErrorMessage()
+    cy.screenshot('LockedUserLogin')
   })
 
 })
